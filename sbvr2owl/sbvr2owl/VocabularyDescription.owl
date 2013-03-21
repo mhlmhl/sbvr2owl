@@ -7,13 +7,13 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY dct "http://purl.org/dc/terms/" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
-    <!ENTITY sm "http://www.omg.org/techprocess/AB/SM/20121001/SpecificationMetadata#" >
-    <!ENTITY sbvr-tt  "http://purl.org/sbvr2owl/SBVRTaggedText#" >
-    <!ENTITY sbvr-vd  "http://www.omg.org/spec/SBVR/SBVR2OWL/20121201/VocabularyDescription#" >
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/20130301/20130301/SpecificationMetadata#" >
+    <!ENTITY sbvr-tt "http://purl.org/sbvr2owl/SBVRTaggedText#" >
+    <!ENTITY sbvr-vd  "http://purl.org/sbvr2owl/VocabularyDescription#" >
 ]>
 
 <rdf:RDF  
-xml:base="http://www.omg.org/spec/SBVR/SBVR2OWL/20121201/VocabularyDescription"
+xml:base="http://purl.org/sbvr2owl/VocabularyDescription"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -21,18 +21,18 @@ xml:base="http://www.omg.org/spec/SBVR/SBVR2OWL/20121201/VocabularyDescription"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-	 xmlns:sm="http://www.omg.org/techprocess/AB/SM/20121001/SpecificationMetadata#"
-	 xmlns:sbvr-tt="http://purl.org/sbvr2owl/SBVRTaggedText#"
-	 xmlns:sbvr-vd="http://www.omg.org/spec/SBVR/SBVR2OWL/20121201/VocabularyDescription#">
+xmlns:sm="http://www.omg.org/techprocess/ab/20130301/SpecificationMetadata#"
+xmlns:sbvr-tt="http://purl.org/sbvr2owl/SBVRTaggedText#"
+xmlns:sbvr-vd="http://purl.org/sbvr2owl/VocabularyDescription#">
 
 
-    <owl:Ontology rdf:about="http://www.omg.org/spec/SBVR/SBVR2OWL/20121201/VocabularyDescription">
+    <owl:Ontology rdf:about="http://purl.org/sbvr2owl/VocabularyDescription">
         <rdfs:label>SBVR to OWL Vocabulary Description Ontology</rdfs:label>
 
     <!-- Module-Level Specification Metadata -->
 
         <sm:moduleName rdf:datatype="&xsd;string">SBVR to OWL Vocabulary Description Ontology</sm:moduleName>
-        <sm:moduleVersion rdf:datatype="&xsd;string">1.4 (alpha)</sm:moduleVersion>
+        <sm:moduleVersion rdf:datatype="&xsd;string">1.0</sm:moduleVersion>
         <sm:moduleAbbreviation rdf:datatype="&xsd;string">SBVR-VD</sm:moduleAbbreviation>
         <sm:moduleAbstract rdf:datatype="&xsd;string">This ontology provides a Web Ontology Language (OWL) platform-specific representation of a subset of the concepts and relationships defined in the SBVR 1.1 Specification.  The focus is on core definitions together with the vocabulary description annotations (vocabulary introductory information) given in SBVR Annex C.2.  It is intended for use in transformations from SBVR to OWL, especially where preservation of as much of the original SBVR tagging in definitions is desired.</sm:moduleAbstract>
         <sm:directSource rdf:datatype="&xsd;anyURI">http://www.omg.org/members/cgi-bin/doc?dtc/12-10-10.pdf</sm:directSource>
@@ -58,7 +58,7 @@ AND NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIAB
         <sm:author rdf:datatype="&xsd;string">Mark Linehan, IBM Research</sm:author>
         <sm:author rdf:datatype="&xsd;string">Elisa Kendall, Thematix Partners LLC</sm:author>
 
-        <owl:imports rdf:resource="http://www.omg.org/techprocess/AB/SM/20121201/SpecificationMetadata"/>
+        <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/20130301/SpecificationMetadata"/>
     </owl:Ontology>
 
 
@@ -72,14 +72,6 @@ AND NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIAB
 
 
     <!-- SBVR Vocabulary Annotations -->
-
-    <owl:AnnotationProperty rdf:about="&sbvr-vd;vocabularyName">
-        <skos:prefLabel>vocabulary name</skos:prefLabel>
-        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.2.1</sm:directSource>
-        <skos:definition rdf:datatype="&xsd;string">The vocabulary name appears in the &#39;Name&#39; Font.</skos:definition>
-        <rdfs:subPropertyOf rdf:resource="&sm;specificationTitle"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:AnnotationProperty>
 
     <owl:AnnotationProperty rdf:about="&sbvr-vd;speechCommunity">
         <skos:prefLabel>speech community</skos:prefLabel>
