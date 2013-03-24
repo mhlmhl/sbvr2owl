@@ -58,7 +58,7 @@ AND NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIAB
         <sm:author rdf:datatype="&xsd;string">Mark Linehan, IBM Research</sm:author>
         <sm:author rdf:datatype="&xsd;string">Elisa Kendall, Thematix Partners LLC</sm:author>
 
-        <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/20130301/SpecificationMetadata"/>
+        <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/20130301/SpecificationMetadata.owl"/>
     </owl:Ontology>
 
 
