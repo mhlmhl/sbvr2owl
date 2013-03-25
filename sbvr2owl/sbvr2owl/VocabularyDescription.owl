@@ -7,7 +7,7 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY dct "http://purl.org/dc/terms/" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
-    <!ENTITY sm "http://www.omg.org/techprocess/ab/20130301/20130301/SpecificationMetadata#" >
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/20130301/SpecificationMetadata#" >
     <!ENTITY sbvr-tt "http://purl.org/sbvr2owl/SBVRTaggedText#" >
     <!ENTITY sbvr-vd  "http://purl.org/sbvr2owl/VocabularyDescription#" >
 ]>
