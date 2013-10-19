@@ -34,8 +34,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  -->
  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://purl.org/sbvr2owl/SBVRTaggedText"
-	xmlns:tns="http://purl.org/sbvr2owl/SBVRTaggedText"
+	targetNamespace="http://purl.org/sbvr2owl/SBVRTaggedText/"
+	xmlns:tns="http://purl.org/sbvr2owl/SBVRTaggedText/"
 	elementFormDefault="qualified">
 	<element name="TaggedText" type="tns:TaggedTextType" id="TaggedText"/>
 	<complexType name="TaggedTextType" mixed="true">
