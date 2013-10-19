@@ -2,31 +2,32 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY dct "http://purl.org/dc/terms/" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
-    <!ENTITY sm "http://www.omg.org/techprocess/ab/20130301/SpecificationMetadata#" >
-    <!ENTITY sbvr-tt "http://purl.org/sbvr2owl/SBVRTaggedText#" >
-    <!ENTITY sbvr-vd  "http://purl.org/sbvr2owl/VocabularyDescription#" >
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/" >
+    <!ENTITY sbvr-tt "http://purl.org/sbvr2owl/SBVRTaggedText/" >
+    <!ENTITY sbvr-vd  "http://purl.org/sbvr2owl/VocabularyDescription/" >
 ]>
 
 <rdf:RDF  
-xml:base="http://purl.org/sbvr2owl/VocabularyDescription"
+	 xmlns="http://purl.org/sbvr2owl/VocabularyDescription/"
+	 xmlns:base="http://purl.org/sbvr2owl/VocabularyDescription/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-xmlns:sm="http://www.omg.org/techprocess/ab/20130301/SpecificationMetadata#"
-xmlns:sbvr-tt="http://purl.org/sbvr2owl/SBVRTaggedText#"
-xmlns:sbvr-vd="http://purl.org/sbvr2owl/VocabularyDescription#">
+	 xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+	 xmlns:sbvr-tt="http://purl.org/sbvr2owl/SBVRTaggedText/"
+	 xmlns:sbvr-vd="http://purl.org/sbvr2owl/VocabularyDescription/">
 
 
-    <owl:Ontology rdf:about="http://purl.org/sbvr2owl/VocabularyDescription">
+    <owl:Ontology rdf:about="http://purl.org/sbvr2owl/VocabularyDescription/">
         <rdfs:label>SBVR to OWL Vocabulary Description Ontology</rdfs:label>
 
     <!-- Module-Level Specification Metadata -->
@@ -58,7 +59,7 @@ AND NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIAB
         <sm:author rdf:datatype="&xsd;string">Mark Linehan, IBM Research</sm:author>
         <sm:author rdf:datatype="&xsd;string">Elisa Kendall, Thematix Partners LLC</sm:author>
 
-        <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/20130301/SpecificationMetadata"/>
+        <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata.rdf"/>
     </owl:Ontology>
 
 
@@ -279,7 +280,7 @@ symbols.&#39;</skos:definition>
         <sm:directSource rdf:datatype="&xsd;string">ISO 704, Terminology work - Principles and methods, Second edition, 2000-11-05, section 7.5.</sm:directSource>
         <rdfs:range rdf:resource="&xsd;anyURI"/>
     </owl:AnnotationProperty>
-
+    
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -303,8 +304,45 @@ symbols.&#39;</skos:definition>
         <skos:prefLabel>is partitive</skos:prefLabel>
             <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, isPartitive represents the notion of an SBVR partitive verb concept. isPartitive is defined as verb concept where each instance is an actuality that a given part is in the composition of a given whole.</skos:definition>
         <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 11.1.5.1.</sm:directSource>
-</owl:ObjectProperty>
+	</owl:ObjectProperty>
 
+    <owl:ObjectProperty rdf:about="&sbvr-vd;verbConceptRole">
+        <skos:prefLabel>verb concept role</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">A verb concept role is a role that specifically characterizes its instances by their involvement in an actuality that is an instance of a given verb concept.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated June 2012, section 8.1.1.</sm:directSource>
+    </owl:ObjectProperty>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+    <owl:DatatypeProperty rdf:about="&sbvr-vd;hasData">
+        <skos:prefLabel>has data</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, hasData is considered an SBVR property, which is defined as a quality or trait belonging to a person or thing.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 11.1.5.1.</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">This is the DatatypeProperty equivalent of sbvr-vd:has.</skos:note>
+    </owl:DatatypeProperty>
+    
+
+    <owl:DatatypeProperty rdf:about="&sbvr-vd;isPartitiveData">
+        <skos:prefLabel>is partitive data</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, isPartitive represents the notion of an SBVR partitive verb concept. isPartitive is defined as verb concept where each instance is an actuality that a given part is in the composition of a given whole.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 11.1.5.1.</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">This is the DatatypeProperty equivalent of sbvr-vd:isPartitive.</skos:note>
+	</owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="&sbvr-vd;verbConceptDataRole">
+        <skos:prefLabel>verb concept data role</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">A verb concept role is a role that specifically characterizes its instances by their involvement in an actuality that is an instance of a given verb concept.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated June 2012, section 8.1.1.</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">This is the DatatypeProperty equivalent of sbvr-vd:verbConceptRole.</skos:note>
+    </owl:DatatypeProperty>
+	
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
