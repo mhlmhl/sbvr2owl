@@ -296,15 +296,29 @@ symbols.&#39;</skos:definition>
         <skos:prefLabel>has</skos:prefLabel>
         <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, has is considered an SBVR property, which is defined as a quality or trait belonging to a person or thing.</skos:definition>
         <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 11.1.5.1.</sm:directSource>
+        <owl:inverseOf rdf:resource="&sbvr-vd;of"/>
     </owl:ObjectProperty>
     
+    <owl:ObjectProperty rdf:about="&sbvr-vd;of">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <synonymousForm rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:verb&gt;isOf&lt;/sbvr-tt:verb&gt;</synonymousForm>
+        <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, of is considered an SBVR property, which is defined as a quality or trait belonging to a person or thing.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, annex C.2.2.</sm:directSource>
+    </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&sbvr-vd;isPartitive">
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <skos:prefLabel>is partitive</skos:prefLabel>
-            <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, isPartitive represents the notion of an SBVR partitive verb concept. isPartitive is defined as verb concept where each instance is an actuality that a given part is in the composition of a given whole.</skos:definition>
+        <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, isPartitive represents the notion of an SBVR partitive verb concept. isPartitive is defined as verb concept where each instance is an actuality that a given part is in the composition of a given whole.</skos:definition>
         <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 11.1.5.1.</sm:directSource>
+        <owl:inverseOf rdf:resource="&sbvr-vd;isPartitiveReversed"/>
 	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&sbvr-vd;isPartitiveReversed">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, isPartitiveReversed represents the inverse of an SBVR partitive verb concept. isPartitiveReversed is defined as verb concept where each instance is an actuality that a given whole contains a given part.</skos:definition>
+        <skos:prefLabel>is partitive reversed</skos:prefLabel>
+    </owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="&sbvr-vd;verbConceptRole">
         <skos:prefLabel>verb concept role</skos:prefLabel>
