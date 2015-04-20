@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/" >
+    <!ENTITY sbvr-tt "http://www.omg.org/spec/DTV/SBVRtoOWL/SBVRTaggedText/" >
+    <!ENTITY sbvr-vd  "http://www.omg.org/spec/DTV/SBVRtoOWL/VocabularyDescription/" >
+]>
+
+<rdf:RDF xml:base="http://www.omg.org/spec/DTV/SBVRtoOWL/VocabularyDescription/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+	 xmlns:sbvr-tt="http://www.omg.org/spec/DTV/SBVRtoOWL/SBVRTaggedText/"
+	 xmlns:sbvr-vd="http://www.omg.org/spec/DTV/SBVRtoOWL/VocabularyDescription/">
+
+
+    <owl:Ontology rdf:about="http://www.omg.org/spec/DTV/SBVRtoOWL/VocabularyDescription/">
+        <rdfs:label>SBVR to OWL Vocabulary Description Ontology</rdfs:label>
+
+
+    <!-- Specification Level Metadata for the DTV SBVR to OWL Vocabulary Description Ontology -->
+
+        <sm:specificationTitle rdf:datatype="&xsd;string">Date-Time Vocabulary (DTV) Specification</sm:specificationTitle>
+        <sm:specificationAbbreviation rdf:datatype="&xsd;string">DTV</sm:specificationAbbreviation>
+        <sm:specificationURL rdf:datatype="&xsd;anyURI">http://www.omg.org/spec/DTV/</sm:specificationURL>
+        <sm:specificationAbstract rdf:datatype="&xsd;string">Many ontologies, including those expressed in SBVR and OWL, involve common, generic, cross-domain concepts such as date and time. Characteristics of these concepts are frequent usage in everyday and business activities and wide usage across all business domains such as finance and manufacturing. These concepts exclude specialized needs such as sidereal time and real-time processing requirements. The DTV specification uses the term 'foundation vocabularies' due to the foundational nature of these vocabularies for all these potential users.
+
+DTV addresses two different, but complementary, aspects of time:
+- Type 1: Temporal noun concepts (such as time coordinate, duration, calendar, etc.) that model attributes of SBVR
+noun concepts, and temporal verb concepts (such as time coordinate is in the past, time interval1 is before time interval2, time interval1 includes time interval2, etc.) that model relationships between temporal noun concepts.
+- Type 2: Fact types that relate situation kinds and occurrences (such as a person being married to another person) to temporal concepts (e.g., to a time interval).</sm:specificationAbstract>
+
+        <sm:technologyArea rdf:datatype="&xsd;string">formal semantics</sm:technologyArea>
+
+        <sm:dependsOn rdf:datatype="&xsd;anyURI">http://www.omg.org/techprocess/ab/SpecificationMetadata/</sm:dependsOn>
+
+
+    <!-- Specification Version Metadata for the DTV SBVR to OWL Vocabulary Description Ontology -->
+
+        <sm:publicationDate rdf:datatype="&xsd;dateTime">2015-03-23T18:00:00</sm:publicationDate>
+        <sm:specificationVersionURL rdf:datatype="&xsd;anyURI">http://www.omg.org/spec/DTV/1.2/</sm:specificationVersionURL>
+        <sm:specificationVersionStatus rdf:datatype="&xsd;string">Adopted Specification</sm:specificationVersionStatus>
+        <skos:historyNote rdf:datatype="&xsd;string">Revisions to the DTV specification are managed per the process outlined in the Policies and Procedures for OMG standards, with the intent to maintain backwards compatibility in the ontologies to the degree possible.
+  
+The RDF/XML serialized OWL for the DTV ODM/OWL ontologies have been checked for syntactic errors and logical consistency with Protege 4 (http://protege.stanford.edu/) and HermiT 1.3.8 (http://www.hermit-reasoner.com/) and Pellet 2.2 (http://clarkparsia.com/pellet/).</skos:historyNote>
+        <sm:addressForComments rdf:datatype="&xsd;anyURI">http://www.omg.org/issues/</sm:addressForComments>
+
+
+    <!-- Module-Level Specification Metadata for the DTV SBVR to OWL Vocabulary Description Ontology -->
+
+        <sm:moduleName rdf:datatype="&xsd;string">SBVRtoOWL</sm:moduleName>
+        <sm:moduleVersion rdf:datatype="&xsd;string">1.0</sm:moduleVersion>
+        <sm:moduleAbbreviation rdf:datatype="&xsd;string">SBVR-VD</sm:moduleAbbreviation>
+        <sm:moduleAbstract rdf:datatype="&xsd;string">This ontology provides a Web Ontology Language (OWL) platform-specific representation of a subset of the concepts and relationships defined in the SBVR 1.3 Specification.  The focus is on core definitions together with the vocabulary description annotations (vocabulary introductory information) given in SBVR Annex C.2.  It is intended for use in transformations from SBVR to OWL, especially where preservation of as much of the original SBVR tagging in definitions is desired.</sm:moduleAbstract>
+        <sm:directSource rdf:datatype="&xsd;anyURI">http://www.omg.org/spec/SBVR/</sm:directSource>
+
+
+    <!-- Curation and Rights Metadata for the DTV SBVR to OWL Vocabulary Description Ontology -->
+
+        <sm:copyright rdf:datatype="&xsd;string">(c) Copyright 2012-2014 International Business Machines, Inc. 
+Copyright (c) 2015, Object Management Group, Inc. 
+(c) Copyright 2012-2015 Thematix Partners LLC.</sm:copyright>
+        <sm:submitter rdf:datatype="&xsd;string">Thematix Partners LLC</sm:submitter>
+        <sm:author rdf:datatype="&xsd;string">Mark H. Linehan</sm:author>
+        <sm:author rdf:datatype="&xsd;string">Elisa Kendall</sm:author>
+        <dct:license rdf:datatype="&xsd;string">The MIT License:  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+AND NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</dct:license>
+        <dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/mit-license.php</dct:license>
+        <sm:responsibleTaskForce rdf:datatype="&xsd;anyURI">http://fdtf.omg.org/</sm:responsibleTaskForce>
+
+
+    <!-- Ontology/File-Level Metadata for the DTV SBVR to OWL Vocabulary Description Ontology -->
+
+        <sm:filename rdf:datatype="&xsd;string">VocabularyDescription.rdf</sm:filename>
+        <sm:fileAbbreviation rdf:datatype="&xsd;string">sbvr-vd</sm:fileAbbreviation>
+        <owl:versionIRI rdf:resource="http://www.omg.org/spec/DTV/20150301/SBVRtoOWL/VocabularyDescription/"/>
+
+        <sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.omg.org/spec/ODM/</sm:contentLanguage>
+        <sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
+
+        <owl:imports rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/"/>
+    </owl:Ontology>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- SBVR Vocabulary Annotations -->
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;speechCommunity">
+        <skos:prefLabel>speech community</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">The &#39;Speech Community&#39; caption is used to name the speech community that controls and is responsible for the vocabulary.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.2.4.</sm:directSource>
+        <rdfs:range rdf:resource="&sm;Organization"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;includedVocabulary">
+        <skos:prefLabel>included vocabulary</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">The &#39;Included Vocabulary&#39; caption is used to indicate that another vocabulary is fully incorporated into the vocabulary being described.</skos:definition>
+        <skos:scopeNote rdf:datatype="&xsd;string">All designations and verb concept wordings of an included vocabulary are part of the vocabulary being described.</skos:scopeNote>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.2.6.</sm:directSource>
+        <rdfs:range rdf:resource="&sm;BibliographicCitation"/>
+        <rdfs:subPropertyOf rdf:resource="&sm;dependsOn"/>
+    </owl:AnnotationProperty>
+        
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;includedVocabulary-plain">
+        <skos:prefLabel>plain included vocabulary</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">This annotation provides the plain-text version of the sbvr-vd:includedVocabulary tagged-text.</skos:definition>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&sbvr-vd;source"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;note">
+        <skos:prefLabel>note</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">The &#39;Note&#39; caption labels explanatory notes that do not go under the other captions. Use of the SBVR tagged text as the range of the primary representation allows us to insert tags in the text of the representation to retain SBVR style guidelines in the transformation to OWL.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.2.7 and C.3.9.</sm:directSource>
+        <rdfs:range rdf:resource="&sbvr-tt;TaggedText"/>
+        <rdfs:subPropertyOf rdf:resource="&skos;note"/>
+    </owl:AnnotationProperty>
+
+
+    <!-- SBVR Vocabulary Entries Annotations -->
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;verbConceptWording">
+        <skos:prefLabel>verb concept wording</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">A primary representation of an entry can be a term, a name, or a verb concept wording. It is shown in its appropriate font style. Use sbvr:term for general concepts; use sbvr:name for individual concepts, and use sbvr:verbConceptWording for verb concept wordings.  Use of the SBVR tagged text as the range of the primary representation allows us to insert tags in the text of the representation to retain SBVR style guidelines in the transformation to OWL.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.1</sm:directSource>
+        <rdfs:subPropertyOf rdf:resource="&skos;prefLabel"/>
+        <rdfs:range rdf:resource="&sbvr-tt;TaggedText"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;definition">
+        <skos:prefLabel>definition</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">A definition is shown as an expression that can be logically substituted for the primary representation. It is not a sentence, so it
+does not end in a period.
+
+A definition can be fully formal, partly formal or informal. Use of the SBVR tagged text as the range of the definition allows us to insert tags in the text of the definition to retain SBVR style guidelines in the transformation to OWL, and thus to support formal definitions per the specification.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.2</sm:directSource>
+        <rdfs:subPropertyOf rdf:resource="&skos;definition"/>
+        <rdfs:range rdf:resource="&sbvr-tt;TaggedText"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;description">
+        <skos:prefLabel>description</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">representation that provides a detailed account of something, a verbal portrait</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 11.2.2.2</sm:directSource>
+        <rdfs:subPropertyOf rdf:resource="&dct;description"/>
+        <rdfs:range rdf:resource="&sbvr-tt;TaggedText"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;source">
+        <skos:prefLabel>source</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">The &#39;Source&#39; caption is to indicate a source vocabulary or document for a concept. Use of the SBVR tagged text as the range of the source property allows us to insert tags to retain SBVR style guidelines in the transformation to OWL.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.3</sm:directSource>
+        <rdfs:range rdf:resource="&sbvr-tt;TaggedText"/>
+        <rdfs:subPropertyOf rdf:resource="&sm;directSource"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;dictionaryBasis">
+        <skos:prefLabel>dictionary basis</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">This caption labels a definition from a common dictionary that supports the use of the primary representation. Use of the SBVR tagged text as the range of the dictionary basis property allows us to insert tags to retain SBVR style guidelines in the transformation to OWL.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.4</sm:directSource>
+        <rdfs:range rdf:resource="&sbvr-tt;TaggedText"/>
+        <rdfs:subPropertyOf rdf:resource="&sbvr-vd;source"/>
+    </owl:AnnotationProperty>
+    
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;dictionaryBasis-plain">
+        <skos:prefLabel>plain dictionary basis</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">This annotation provides the plain-text version of the sbvr-vd:dictionaryBasis tagged-text.</skos:definition>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&sbvr-vd;source"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;hasGeneralConcept">
+        <skos:prefLabel>has general concept</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">The &#39;General Concept&#39; caption can be used to indicate a concept that generalizes the entry concept. This is not needed if there is a definition that starts with the general concept, but it is helpful in cases where a definition is not provided, such as is often the case for individual concepts (named things) or concepts taken from a source. It should be used in cases where there is an explicit General Concept tag, together with the subClass relationship.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.5</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">The name for the annotation property differs slightly from its treatment in the SBVR specification in order to avoid name collisions with the model for SBVR general concepts as given below.</skos:note>
+        <rdfs:range rdf:resource="&sbvr-vd;Concept"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;hasConceptType">
+        <skos:prefLabel>has concept type</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">The &#39;Concept Type&#39; caption is used to specify a type of the entry concept. This is typically not used if the concept has no particular type other than what is obvious from the primary representation. </skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.6</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">The name for the annotation property differs slightly from its treatment in the SBVR specification in order to avoid name collisions with the model for SBVR concepts given below.  Concerns that the use of this term results essentially in punning are alleviated to a degree due to usage in the context of an annotation.</skos:note>
+        <skos:note rdf:datatype="&xsd;string">The range of hasConceptType should be an sbvr-vd:Concept, or an XSD datatype, or another element specified in this sbvr-vd vocabulary.</skos:note>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;characteristicOf">
+        <skos:prefLabel>characteristic of</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">The purpose of this property is to capture the relationship between characteristics such as "thing is red", "thing is blue", etc., and their characteristic types such as "color".  "This is red" becomes a "red" of type xsd:boolean of class "thing", with an annotation sbvr-vd:characteristicOf that references class "color".</skos:definition>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;necessity">
+        <skos:prefLabel>necessity</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">A &#39;Necessity&#39; caption is used to state something that is
+necessarily true. Use of the SBVR tagged text as the range of necessity allows us to insert tags to retain SBVR style guidelines in the transformation to OWL.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.7</sm:directSource>
+        <rdfs:range rdf:resource="&sbvr-tt;TaggedText"/>
+    </owl:AnnotationProperty>
+        
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;necessity-plain">
+        <skos:prefLabel>plain necessity</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">This annotation provides the plain-text version of the sbvr-vd:necessity tagged-text.</skos:definition>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;possibility">
+        <skos:prefLabel>possibility</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">A &#39;Necessity&#39; caption explains that something is a possibility that is not prevented by definition. Use of the SBVR tagged text as the range of possibility allows us to insert tags to retain SBVR style guidelines in the transformation to OWL.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.7</sm:directSource>
+        <rdfs:range rdf:resource="&sbvr-tt;TaggedText"/>
+    </owl:AnnotationProperty>
+        
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;possibility-plain">
+        <skos:prefLabel>plain dictionary basis</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">This annotation provides the plain-text version of the sbvr-vd:possibility tagged-text.</skos:definition>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;referenceScheme">
+        <skos:prefLabel>reference scheme</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">The &#39;Reference Scheme&#39; caption is used to state how things denoted by the term can be distinguished from each other based on one or more facts about the things. A reference scheme is expressed by referring to at least one role of a binary verb concept and indicating whether a reference involves a single instance of the role or whether it involves the extension of related instances. Use of the SBVR tagged text as the range of the reference scheme allows us to insert tags to retain SBVR style guidelines in the transformation to OWL.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.8</sm:directSource>
+        <rdfs:range rdf:resource="&sbvr-tt;TaggedText"/>
+    </owl:AnnotationProperty>
+        
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;referenceScheme-plain">
+        <skos:prefLabel>plain dictionary basis</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">This annotation provides the plain-text version of the sbvr-vd:referenceScheme tagged-text.</skos:definition>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;example">
+        <skos:prefLabel>example</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">The &#39;Example&#39; caption labels examples involving the entry concept. Use of the SBVR tagged text as the range of the example property allows us to insert tags to retain SBVR style guidelines in the transformation to OWL.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.10</sm:directSource>
+        <rdfs:range rdf:resource="&sbvr-tt;TaggedText"/>
+        <rdfs:subPropertyOf rdf:resource="&skos;example"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;synonym">
+        <skos:prefLabel>synonym</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">A synonym is another designation that can be substituted for the primary representation. It is a designation for the same concept.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.11</sm:directSource>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&skos;altLabel"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;synonymousForm">
+        <skos:prefLabel>synonymous form</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">A synonymous form is a verb concept wording for the same verb concept. The order of placeholders for verb concept roles can be different. Use of the SBVR tagged text as the range of the property allows us to insert tags to retain SBVR style guidelines in the transformation to OWL.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.12</sm:directSource>
+        <rdfs:range rdf:resource="&sbvr-tt;TaggedText"/>
+        <rdfs:subPropertyOf rdf:resource="&skos;altLabel"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;see">
+        <skos:prefLabel>see</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">Where the primary representation is not a preferred representation for the entry concept, the &#39;See&#39; caption introduces the
+preferred representation. No definition is given in this case.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.13</sm:directSource>
+        <rdfs:subPropertyOf rdf:resource="&rdfs;isDefinedBy"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;subjectField">
+        <skos:prefLabel>subject field</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">Where a signifier is not unique in a vocabulary, there is a need for qualification by a subject field. The subject field of a designation is given using the &#39;Subject Field&#39; caption.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.14</sm:directSource>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;namespaceURI">
+        <skos:prefLabel>namespace URI</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">If the primary entry is for a namespace, the &#39;Namespace URI&#39; caption is used to indicate a URI of the namespace. If the primary entry is for a vocabulary, the &#39;Namespace URI&#39; caption is used to indicate a URI of a vocabulary namespace for the vocabulary.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section C.3.15</sm:directSource>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;symbol">
+        <skos:prefLabel>symbol</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">A symbol is an SBVR nonverbal designation. Per ISO 704, &#39;a symbol should be 
+- simple and easy to recognize and, if possible, self-explanatory,
+- monosemic in a specific context,
+- unambiguous,
+- easy and economical to reproduce, and
+- consistent and appropriate, i.e., designed to permit coordination with and differentiation from other related
+symbols.&#39;</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 11.2.1.2.</sm:directSource>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 704, Terminology work - Principles and methods, Second edition, 2000-11-05, section 7.5.</sm:directSource>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:AnnotationProperty>
+
+    <owl:AnnotationProperty rdf:about="&sbvr-vd;icon">
+        <skos:prefLabel>icon</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">An icon is a nonverbal designation that is usually a pictoral representation.  Per ISO 704, &#39;Iconic symbols should bear some visual resemblance to the concept they represent. Generally their meaning should be directly apparent without explanation. In some cases, however, the visual resemblance of the symbol is less pronounced or completely lost. Its meaning may be no longer directly recognizable and may be supported only by general agreement.&#39;</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 11.2.1.2.</sm:directSource>
+        <sm:directSource rdf:datatype="&xsd;string">ISO 704, Terminology work - Principles and methods, Second edition, 2000-11-05, section 7.5.</sm:directSource>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:AnnotationProperty>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:ObjectProperty rdf:about="&sbvr-vd;has">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <skos:prefLabel>has</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, has is considered an SBVR property, which is defined as a quality or trait belonging to a person or thing.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 11.1.5.1.</sm:directSource>
+        <owl:inverseOf rdf:resource="&sbvr-vd;of"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="&sbvr-vd;of">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <synonymousForm rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:verb&gt;isOf&lt;/sbvr-tt:verb&gt;</synonymousForm>
+        <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, of is considered an SBVR property, which is defined as a quality or trait belonging to a person or thing.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, annex C.2.2.</sm:directSource>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="&sbvr-vd;isPartitive">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <skos:prefLabel>is partitive</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, isPartitive represents the notion of an SBVR partitive verb concept. isPartitive is defined as verb concept where each instance is an actuality that a given part is in the composition of a given whole.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 11.1.5.1.</sm:directSource>
+        <owl:inverseOf rdf:resource="&sbvr-vd;isPartitiveReversed"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&sbvr-vd;isPartitiveReversed">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, isPartitiveReversed represents the inverse of an SBVR partitive verb concept. isPartitiveReversed is defined as verb concept where each instance is an actuality that a given whole contains a given part.</skos:definition>
+        <skos:prefLabel>is partitive reversed</skos:prefLabel>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="&sbvr-vd;verbConceptRole">
+        <skos:prefLabel>verb concept role</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">A verb concept role is a role that specifically characterizes its instances by their involvement in an actuality that is an instance of a given verb concept.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated June 2012, section 8.1.1.</sm:directSource>
+    </owl:ObjectProperty>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <owl:DatatypeProperty rdf:about="&sbvr-vd;hasData">
+        <skos:prefLabel>has data</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, hasData is considered an SBVR property, which is defined as a quality or trait belonging to a person or thing.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 11.1.5.1.</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">This is the DatatypeProperty equivalent of sbvr-vd:has.</skos:note>
+    </owl:DatatypeProperty>
+    
+
+    <owl:DatatypeProperty rdf:about="&sbvr-vd;isPartitiveData">
+        <skos:prefLabel>is partitive data</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">For the purposes of this mapping, isPartitive represents the notion of an SBVR partitive verb concept. isPartitive is defined as verb concept where each instance is an actuality that a given part is in the composition of a given whole.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 11.1.5.1.</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">This is the DatatypeProperty equivalent of sbvr-vd:isPartitive.</skos:note>
+	</owl:DatatypeProperty>
+    
+    <owl:DatatypeProperty rdf:about="&sbvr-vd;verbConceptDataRole">
+        <skos:prefLabel>verb concept data role</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">A verb concept role is a role that specifically characterizes its instances by their involvement in an actuality that is an instance of a given verb concept.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated June 2012, section 8.1.1.</sm:directSource>
+        <skos:note rdf:datatype="&xsd;string">This is the DatatypeProperty equivalent of sbvr-vd:verbConceptRole.</skos:note>
+    </owl:DatatypeProperty>
+	
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class rdf:about="&sbvr-vd;Concept">
+        <skos:prefLabel>concept</skos:prefLabel>
+        <sbvr-vd:term rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:noun&gt;concept&lt;/sbvr-tt:noun&gt;</sbvr-vd:term>
+        <sbvr-vd:source rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:individual&gt;ISO 1087-1 (English)&lt;/sbvr-tt:individual&gt; (3.2.1) &lt;sbvr-tt:keyword&gt;&#133;&#47;&lt;/sbvr-tt:keyword&gt;concept&lt;sbvr-tt:keyword&gt;&#135;&#47;&lt;/sbvr-tt:keyword&gt;</sbvr-vd:source>
+        <sbvr-vd:definition rdf:datatype="&sbvr-tt;TaggedText">unit of knowledge created by a unique combination of characteristics</sbvr-vd:definition>
+        <rdfs:subClassOf rdf:resource="&sbvr-vd;Meaning"/>
+        <sbvr-vd:hasGeneralConcept rdf:resource="&sbvr-vd;Meaning"/>
+        <sbvr-vd:referenceScheme rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:keyword&gt;a&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;designation&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:verb&gt;of&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:keyword&gt;the&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;concept&lt;/sbvr-tt:noun&gt;</sbvr-vd:referenceScheme>
+        <sm:directSource rdf:datatype="&xsd;string">paragraph 8.1.1, page 19, SBVR 1.1 RTF Convenience document without change bars, December 2011</sm:directSource>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&sbvr-vd;ConceptType">
+        <skos:prefLabel>concept type</skos:prefLabel>
+        <sbvr-vd:term rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:noun&gt;concept type&lt;/sbvr-tt:noun&gt;</sbvr-vd:term>
+        <sbvr-vd:definition rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:noun&gt;general concept&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:keyword&gt;that&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:verb&gt;specializes&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:keyword&gt;the&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;concept&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:keyword&gt;&#47;&lt;/sbvr-tt:keyword&gt;&lt;sbvr-tt:noun&gt;concept&lt;/sbvr-tt:noun&gt;&lt;sbvr-tt:keyword&gt;&#47;&lt;/sbvr-tt:keyword&gt;</sbvr-vd:definition>
+        <skos:definition rdf:datatype="&sbvr-tt;TaggedText">general concept that specializes the concept &#47;concept&#47;</skos:definition>
+        <rdfs:subClassOf rdf:resource="&sbvr-vd;GeneralConcept"/>
+        <sbvr-vd:note rdf:datatype="&sbvr-tt;TaggedText">A &lt;sbvr-tt:noun&gt;concept&lt;/sbvr-tt:noun&gt; is related to a &lt;sbvr-tt:noun&gt;concept type&lt;/sbvr-tt:noun&gt; by being an &lt;sbvr-tt:noun&gt;instance&lt;/sbvr-tt:noun&gt; of the &lt;sbvr-tt:noun&gt;concept type&lt;/sbvr-tt:noun&gt;.</sbvr-vd:note>
+        <sbvr-vd:example rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:noun&gt;verb concept&lt;/sbvr-tt:noun&gt;, &lt;sbvr-tt:noun&gt;role&lt;/sbvr-tt:noun&gt;, &lt;sbvr-tt:noun&gt;concept type&lt;/sbvr-tt:noun&gt;</sbvr-vd:example>
+    </owl:Class>
+
+    <owl:Class rdf:about="&sbvr-vd;GeneralConcept">
+        <skos:prefLabel>general concept</skos:prefLabel>
+        <sbvr-vd:term rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:noun&gt;general concept&lt;/sbvr-tt:noun&gt;</sbvr-vd:term>
+        <rdfs:subClassOf rdf:resource="&sbvr-vd;NounConcept"/>
+        <owl:disjointWith rdf:resource="&sbvr-vd;IndividualConcept"/>
+        <sbvr-vd:definition rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:noun&gt;noun concept&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:keyword&gt;that&lt;/sbvr-tt:keyword&gt; classifies things on the basis of their common properties</sbvr-vd:definition>
+        <skos:definition rdf:datatype="&xsd;string">noun concept that classifies things on the basis of their common properties</skos:definition>
+        <sbvr-vd:source rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:keyword&gt;based on&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:individual&gt;ISO 1087-1 (English)&lt;/sbvr-tt:individual&gt; (3.2.3) &lt;sbvr-tt:keyword&gt;&#133;&#47;&lt;/sbvr-tt:keyword&gt;general concept&lt;sbvr-tt:keyword&gt;&#135;&#47;&lt;/sbvr-tt:keyword&gt;</sbvr-vd:source>
+        <sbvr-vd:hasConceptType rdf:resource="&sbvr-vd;ConceptType"/>
+        <sbvr-vd:necessity rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:keyword&gt;The&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;set&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:verb&gt;of&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:noun&gt;characteristics&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:keyword&gt;that&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:verb&gt;are incorporated by&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:keyword&gt;a&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;general concept&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:verb&gt;is&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:keyword&gt;not the&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;set&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:verb&gt;of&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:noun&gt;characteristics&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:keyword&gt;that&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:verb&gt;are incorporated by&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:keyword&gt;another&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;general concept&lt;/sbvr-tt:noun&gt;</sbvr-vd:necessity>
+        <sbvr-vd:note rdf:datatype="&sbvr-tt;TaggedText">A general concept incorporates a set of characteristics which are a unique combination that distinguishes that general concept from all other general concepts. See &#47;&lt;sbvr-tt:noun&gt;concept&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:verb&gt;incorporates&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:noun&gt;characteristic&lt;/sbvr-tt:noun&gt;&#47;. If a general concept A and a general concept B have the very same incorporated characteristics, they are the same concept. If they have the very same necessary characteristics, they are logically equivalent and they denote the same things in all possible worlds.</sbvr-vd:note>
+        <sbvr-vd:example rdf:datatype="&sbvr-tt;TaggedText">the concept &#47;rental car&#47; corresponding to cars that are rented</sbvr-vd:example>
+        <sbvr-vd:example rdf:datatype="&sbvr-tt;TaggedText">the concept &#47;car&#47;, the concept &#47;number&#47;, the concept &#47;person&#47;</sbvr-vd:example>
+        <sm:directSource rdf:datatype="&xsd;string">paragraph 8.1.1, page 19, SBVR 1.1 RTF Convenience document without change bars, December 2011</sm:directSource>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&sbvr-vd;IndividualConcept">
+        <skos:prefLabel>individual concept</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="&sbvr-vd;UnitaryConcept"/>
+        <skos:note rdf:datatype="&xsd;string">A full understanding of‘individual concept requires a full understanding of the Necessities in Clause 8.6.2, Necessities Concerning Extension.</skos:note>
+        <sbvr-vd:source rdf:datatype="&xsd;string">ISO 1087-1 (English) (3.2.2) individual concept</sbvr-vd:source>
+        <skos:note rdf:datatype="&xsd;string">Individual concepts are unitary concepts whose extensions are necessarily invariant across all possible worlds.</skos:note>
+        <skos:example rdf:datatype="&xsd;string">The individual concept California whose one instance is an individual state in the United States of America</skos:example>
+        <skos:note rdf:datatype="&xsd;string">While each referring individual concept has at most one and the same instance in all possible worlds, there can be multiple individual concepts that correspond to the same thing. Different definite descriptions of the same individual thing can represent different individual concepts that correspond to that thing. If an individual concept does not correspond to any thing in some world, it does not correspond to any thing in any possible world.</skos:note>
+        <skos:definition rdf:datatype="&xsd;string">concept that corresponds to only one object (thing)</skos:definition>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&sbvr-vd;Meaning">
+        <skos:prefLabel>meaning</skos:prefLabel>
+        <sbvr-vd:term rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:noun&gt;meaning&lt;/sbvr-tt:noun&gt;</sbvr-vd:term>
+        <rdfs:subClassOf rdf:resource="&sbvr-vd;Thing"/>
+        <sbvr-vd:definition rdf:datatype="&sbvr-tt;TaggedText">what is meant by a word, sign, statement, or description; what someone intends to express or what someone understands</sbvr-vd:definition>
+        <sm:directSource rdf:datatype="&sbvr-tt;TaggedText">paragraph 8.1, page 19, SBVR 1.1 RTF Convenience document without change bars, December 2011</sm:directSource>
+    </owl:Class>
+
+    <owl:Class rdf:about="&sbvr-vd;NounConcept">
+        <skos:prefLabel>noun concept</skos:prefLabel>
+        <sbvr-vd:term rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:noun&gt;noun concept&lt;/sbvr-tt:noun&gt;</sbvr-vd:term>
+        <rdfs:subClassOf rdf:resource="&sbvr-vd;Concept"/>
+        <sbvr-vd:definition rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:noun&gt;concept&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:keyword&gt;that&lt;/sbvr-tt:keyword&gt; is the meaning of a noun or noun phrase</sbvr-vd:definition>
+        <skos:definition rdf:datatype="&xsd;string">concept that is the meaning of a noun or noun phrase</skos:definition>
+        <sbvr-vd:hasConceptType rdf:resource="&sbvr-vd;ConceptType"/>
+        <sbvr-vd:referenceScheme rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:keyword&gt;a&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;closed projection&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:keyword&gt;that&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:verb&gt;defines&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:keyword&gt;the&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;noun concept&lt;/sbvr-tt:noun&gt;</sbvr-vd:referenceScheme>
+        <sm:directSource rdf:datatype="&xsd;string">paragraph 8.1.1, page 19, SBVR 1.1 RTF Convenience document without change bars, December 2011</sm:directSource>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&sbvr-vd;Set">
+        <skos:prefLabel>set</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="&sbvr-vd;Thing"/>
+        <sbvr-vd:definition rdf:datatype="&sbvr-tt;TaggedText">collection of zero or more &lt;sbvr-tt:noun&gt;things&lt;/sbvr-tt:noun&gt; considered together without regard to order or repetition</sbvr-vd:definition>
+        <skos:definition rdf:datatype="&xsd;string">collection of zero or more things considered together without regard to order or repetition</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">paragraph 8.6, page 42, SBVR 1.1 RTF Convenience document without change bars, December 2011</sm:directSource>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&sbvr-vd;SituationalRole">
+        <rdfs:subClassOf rdf:resource="&sbvr-vd;GeneralConcept"/>
+        <skos:prefLabel>situational role</skos:prefLabel>
+        <skos:definition rdf:datatype="&xsd;string">A situational role identifies classes that are also roles.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 11.1.5.2.</sm:directSource>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&sbvr-vd;Thing">
+        <skos:definition rdf:datatype="&xsd;string">Anything perceivable or conceivable.</skos:definition>
+        <sm:directSource rdf:datatype="&xsd;string">Semantics of Business Vocabulary and Business Rules (SBVR), SBVR 1.1 RTF Convenience document without change bars, dated December 2011, section 8.7.</sm:directSource>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&sbvr-vd;UnitaryConcept">
+        <skos:prefLabel>unitary concept</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="&sbvr-vd;NounConcept"/>
+        <sbvr-vd:definition rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:noun&gt;individual concept&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:keyword&gt;or&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;general concept&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:keyword&gt;that always&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:verb&gt;has&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:keyword&gt;at most one&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;instance&lt;/sbvr-tt:noun&gt;</sbvr-vd:definition>
+        <sbvr-vd:hasConceptType rdf:resource="&sbvr-vd;ConceptType"/>
+        <skos:definition rdf:datatype="&xsd;string">individual concept or general concept that always has at most one instance</skos:definition>
+        <skos:note rdf:datatype="&xsd;string">The meaning of a singular definite description is a unitary concept.</skos:note>
+    </owl:Class>
+
+    <owl:Class rdf:about="&sbvr-vd;VerbConcept">
+        <skos:prefLabel>verb concept</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="&sbvr-vd;Concept"/>
+        <sbvr-vd:definition rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:noun&gt;concept&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:keyword&gt;that&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:verb&gt;specializes&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:keyword&gt;the&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;concept&lt;/sbvr-tt:noun&gt; &#39;&lt;sbvr-tt:noun&gt;actuality&lt;/sbvr-tt:noun&gt;&#39; &lt;sbvr-tt:keyword&gt;and that&lt;/sbvr-tt:keyword&gt; is the meaning of a verb phrase that involves one or more&lt;sbvr-tt:noun&gt;roles&lt;/sbvr-tt:noun&gt;</sbvr-vd:definition>
+        <sbvr-vd:hasConceptType rdf:resource="&sbvr-vd;ConceptType"/>
+        <skos:definition rdf:datatype="&xsd;string">concept that specializes the concept &#39;actuality&#39; and that is the meaning of a verb phrase that involves one or more roles</skos:definition>
+        <sbvr-vd:note rdf:datatype="&sbvr-tt;TaggedText">Each instance of a &lt;sbvr-tt:noun&gt;verb concept&lt;/sbvr-tt:noun&gt; is an actuality. For each instance, each &lt;sbvr-tt:noun&gt;role&lt;/sbvr-tt:noun&gt; of the &lt;sbvr-tt:noun&gt;verb concept&lt;/sbvr-tt:noun&gt; is one point of involvement of something in that actuality.</sbvr-vd:note>
+        <skos:note rdf:datatype="&xsd;string">Two verb concept definitions define the same verb concept if they reveal the same
+incorporated characteristics and the same verb concept roles.</skos:note>
+        <sbvr-vd:necessity rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:keyword&gt;Each&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;verb concept&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:verb&gt;has&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:keyword&gt;at least one&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;role&lt;/sbvr-tt:noun&gt;.</sbvr-vd:necessity>
+        <sbvr-vd:necessity rdf:datatype="&sbvr-tt;TaggedText">&lt;sbvr-tt:keyword&gt;Each&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;verb concept&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:verb&gt;is&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:keyword&gt;a&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;concept&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:keyword&gt;that&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:verb&gt;specializes&lt;/sbvr-tt:verb&gt; &lt;sbvr-tt:keyword&gt;the&lt;/sbvr-tt:keyword&gt; &lt;sbvr-tt:noun&gt;concept&lt;/sbvr-tt:noun&gt; &lt;sbvr-tt:keyword&gt;&#39;&lt;/sbvr-tt:keyword&gt;&lt;sbvr-tt:noun&gt;actuality&lt;/sbvr-tt:noun&gt;&lt;sbvr-tt:keyword&gt;&#39;&lt;/sbvr-tt:keyword&gt;.</sbvr-vd:necessity>
+    </owl:Class>
+
+    
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdfs:Datatype rdf:about="&sbvr-tt;TaggedText">
+        <rdfs:label>SBVR tagged text</rdfs:label>
+        <owl:equivalentClass rdf:resource="&xsd;string"/>
+    </rdfs:Datatype>
+
+</rdf:RDF>
