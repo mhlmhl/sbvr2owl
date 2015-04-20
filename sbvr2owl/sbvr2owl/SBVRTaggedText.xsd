@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- 
-This XML schema defines XML elements that annotate SBVR Structured English, per Annex C of the 
-Object Management Group's SBVR 1.0 specification.  This schema is referenced by the VocabularyDescription.owl
-ontology. 
+This XML schema defines XML elements that annotate SBVR Structured English, per Annex C of the Object Management Group's SBVR 1.0 specification.  This schema is referenced by the VocabularyDescription.rdf ontology. 
 -->
 
 <!-- 
-Copyright (c) 2012-2013 Thematix Partners LLC, All Rights Reserved
-Copyright (c) 2012-2013 IBM Corporation, All Rights Reserved
+Copyright (c) 2012-2014 IBM Corporation, All Rights Reserved
+Copyright (c) 2015 Object Management Group, All Rights Reserved
+Copyright (c) 2012-2015 Thematix Partners LLC, All Rights Reserved
 
 Authors: Mark H. Linehan, IBM Research
          Elisa Kendall, Thematix Partners LLC
@@ -17,11 +16,7 @@ Authors: Mark H. Linehan, IBM Research
  <!-- This file is licensed under the "MIT License", which can be found at http://opensource.org/licenses/MIT,
       and is reproduced here.
       
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
-associated documentation files (the "Software"), to deal in the Software without restriction, including 
-without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
-copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
-following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial 
 portions of the Software.
@@ -34,8 +29,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  -->
  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://purl.org/sbvr2owl/SBVRTaggedText/"
-	xmlns:tns="http://purl.org/sbvr2owl/SBVRTaggedText/"
+	targetNamespace="http://www.omg.org/spec/DTV/SBVRtoOWL/SBVRTaggedText/"
+	xmlns:tns="http://www.omg.org/spec/DTV/SBVRtoOWL/SBVRTaggedText/"
 	elementFormDefault="qualified">
 	<element name="TaggedText" type="tns:TaggedTextType" id="TaggedText"/>
 	<complexType name="TaggedTextType" mixed="true">
